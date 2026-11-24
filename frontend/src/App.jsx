@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import Dashboard from './pages/Dashboard';
+import RegistrationWizard from './features/registration/RegistrationWizard';
 import { useAuth } from './context/AuthContext';
 
 export default function App() {
@@ -33,6 +34,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <ProtectedRoute>
+                <RegistrationWizard />
               </ProtectedRoute>
             }
           />

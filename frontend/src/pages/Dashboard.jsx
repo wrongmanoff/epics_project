@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 
@@ -43,6 +43,9 @@ export default function Dashboard() {
         </ul>
 
         <div className="dashboard__actions">
+          <Link to="/register" className="btn btn--primary">
+            {t('dashboard.completeProfile')}
+          </Link>
           <button
             type="button"
             className="btn btn--secondary"

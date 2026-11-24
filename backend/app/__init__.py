@@ -26,8 +26,10 @@ def create_app(config_class=Config):
     limiter.init_app(app)
 
     from app.routes.auth import auth_bp
+    from app.routes.registration import registration_bp
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
+    app.register_blueprint(registration_bp, url_prefix="/api/registration")
 
     @app.get("/api/health")
     def health():

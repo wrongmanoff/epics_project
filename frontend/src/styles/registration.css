@@ -1,0 +1,466 @@
+/* Registration / Profile Completion — Deep Bharat theme */
+
+.reg-layout {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* ---- Progress Bar ---- */
+.reg-progress {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.reg-progress__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.reg-progress__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 2px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text-secondary);
+  z-index: 1;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.reg-progress__step--done .reg-progress__circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.reg-progress__step--active .reg-progress__circle {
+  background: var(--color-saffron);
+  border-color: var(--color-saffron);
+  color: #000;
+}
+
+.reg-progress__label {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.35rem;
+  text-align: center;
+  max-width: 5.5rem;
+  line-height: 1.25;
+}
+
+.reg-progress__step--active .reg-progress__label {
+  color: var(--color-saffron);
+  font-weight: 600;
+}
+
+.reg-progress__step--done .reg-progress__label {
+  color: var(--color-text);
+}
+
+.reg-progress__line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  margin: 0 -0.25rem;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.reg-progress__line--done {
+  background: var(--color-primary);
+}
+
+/* ---- Card ---- */
+.reg-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.reg-card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.reg-card__subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+/* ---- Form groups ---- */
+.reg-group {
+  margin-bottom: 1.25rem;
+}
+
+.reg-group__label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.reg-group__hint {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.reg-group select,
+.reg-group input[type='text'],
+.reg-group input[type='number'] {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-input);
+  color: var(--color-text);
+  appearance: none;
+}
+
+.reg-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A1A1AA' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+}
+
+.reg-group select:focus-visible,
+.reg-group input:focus-visible {
+  border-color: var(--color-saffron);
+}
+
+.reg-group__error {
+  color: var(--color-error);
+  font-size: 0.8125rem;
+  margin-top: 0.3rem;
+}
+
+/* ---- Chip selectors ---- */
+.reg-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.reg-chip {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background: var(--color-card);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.reg-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.reg-chip--selected {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.reg-chip--selected:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #fff;
+}
+
+/* ---- Radio / Checkbox groups ---- */
+.reg-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.reg-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-card-elevated);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.reg-option:hover {
+  border-color: var(--color-primary);
+}
+
+.reg-option--selected {
+  border-color: var(--color-primary);
+  background: var(--color-soft-green);
+}
+
+.reg-option input {
+  accent-color: var(--color-primary);
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.reg-option span {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* ---- Occupation sections ---- */
+.reg-occ-section {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-card-elevated);
+}
+
+.reg-occ-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-saffron);
+}
+
+/* ---- Tri-state (Available / Not Available / Not Sure) ---- */
+.reg-tristate {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reg-tristate:last-child {
+  border-bottom: none;
+}
+
+.reg-tristate__label {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.reg-tristate__buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.reg-tristate__btn {
+  padding: 0.3rem 0.65rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-card);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.reg-tristate__btn:hover {
+  border-color: var(--color-primary);
+}
+
+.reg-tristate__btn--available {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.reg-tristate__btn--not_available {
+  background: var(--color-error-bg);
+  border-color: #713333;
+  color: var(--color-error);
+}
+
+.reg-tristate__btn--not_sure {
+  background: #2a2200;
+  border-color: #554400;
+  color: var(--color-saffron);
+}
+
+/* ---- Document category ---- */
+.reg-doc-category {
+  margin-bottom: 1.25rem;
+}
+
+.reg-doc-category h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Review summary ---- */
+.reg-review-section {
+  margin-bottom: 1.5rem;
+}
+
+.reg-review-section h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reg-review-section h3 button {
+  background: none;
+  border: none;
+  color: var(--color-saffron);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+.reg-review-section h3 button:hover {
+  text-decoration: underline;
+}
+
+.reg-review-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.reg-review-row:last-child {
+  border-bottom: none;
+}
+
+.reg-review-row dt {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.reg-review-row dd {
+  margin: 0;
+  text-align: right;
+  color: var(--color-text);
+}
+
+/* ---- Navigation buttons ---- */
+.reg-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.reg-nav .btn {
+  min-width: 8rem;
+}
+
+/* ---- Circumstance toggles ---- */
+.reg-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reg-toggle:last-child {
+  border-bottom: none;
+}
+
+.reg-toggle__label {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.reg-toggle input[type='checkbox'] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* ---- Success overlay ---- */
+.reg-success {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.reg-success__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.reg-success h2 {
+  color: var(--color-success);
+  margin-bottom: 0.5rem;
+}
+
+.reg-success p {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 640px) {
+  .reg-layout {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .reg-card {
+    padding: 2rem;
+  }
+
+  .reg-tristate {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-progress__label {
+    display: none;
+  }
+
+  .reg-tristate__buttons {
+    flex-direction: column;
+  }
+
+  .reg-nav {
+    flex-direction: column;
+  }
+
+  .reg-nav .btn {
+    width: 100%;
+  }
+}
