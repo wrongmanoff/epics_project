@@ -1,0 +1,108 @@
+{
+  "brand": {
+    "name": "JanSahayak",
+    "tagline": "Welfare scheme guidance for every citizen"
+  },
+  "nav": {
+    "login": "Log in",
+    "signup": "Create account",
+    "dashboard": "Dashboard",
+    "logout": "Log out"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "hi": "हिन्दी",
+    "mr": "मराठी"
+  },
+  "common": {
+    "loading": "Please wait…",
+    "required": "Required",
+    "optional": "Optional",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "backToLogin": "Back to login",
+    "or": "or"
+  },
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Log in to check schemes you may be eligible for and track your saved information.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me on this device",
+    "forgotPassword": "Forgot password?",
+    "submit": "Log in",
+    "submitting": "Logging in…",
+    "noAccount": "New here?",
+    "createAccount": "Create an account",
+    "success": "Logged in successfully."
+  },
+  "signup": {
+    "title": "Create your account",
+    "subtitle": "Register once to get personalised scheme guidance in your language.",
+    "fullNameLabel": "Full name",
+    "fullNamePlaceholder": "As on your official documents",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "mobileLabel": "Mobile number",
+    "mobileHint": "Optional",
+    "mobilePlaceholder": "10-digit mobile number",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "At least 8 characters",
+    "confirmPasswordLabel": "Confirm password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "acceptTerms": "I accept the terms of use and privacy policy.",
+    "termsLink": "Terms",
+    "privacyLink": "Privacy",
+    "submit": "Create account",
+    "submitting": "Creating account…",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "success": "Account created successfully.",
+    "verifyEmail": "Account created. Please check your email to verify your account before logging in."
+  },
+  "forgot": {
+    "title": "Reset your password",
+    "subtitle": "Enter the email linked to your account. If it exists, we will send a reset link.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send reset link",
+    "submitting": "Sending…",
+    "success": "If an account exists for that email, a reset link has been sent."
+  },
+  "dashboard": {
+    "title": "Your dashboard",
+    "welcome": "Welcome, {{name}}",
+    "intro": "This is a temporary home page for the authentication module. Scheme recommendations will appear here in the full JanSahayak application.",
+    "profileHeading": "Your profile",
+    "email": "Email",
+    "mobile": "Mobile",
+    "mobileEmpty": "Not provided",
+    "logout": "Log out",
+    "loggingOut": "Logging out…"
+  },
+  "validation": {
+    "emailRequired": "Please enter your email address.",
+    "emailInvalid": "Please enter a valid email address.",
+    "passwordRequired": "Please enter your password.",
+    "passwordShort": "Password must be at least 8 characters.",
+    "passwordLetter": "Password must include at least one letter.",
+    "passwordNumber": "Password must include at least one number.",
+    "passwordMismatch": "Passwords do not match.",
+    "fullNameRequired": "Please enter your full name.",
+    "fullNameShort": "Full name must be at least 2 characters.",
+    "mobileInvalid": "Enter a valid 10-digit Indian mobile number.",
+    "termsRequired": "Please accept the terms and privacy policy."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Unable to reach the server. Check your connection and try again.",
+    "unauthorized": "Please log in to continue.",
+    "sessionExpired": "Your session has expired. Please log in again."
+  },
+  "footer": {
+    "disclaimer": "JanSahayak is an educational EPICS project and is not an official government website."
+  }
+}
