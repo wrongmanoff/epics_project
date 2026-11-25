@@ -73,15 +73,100 @@
     "success": "If an account exists for that email, a reset link has been sent."
   },
   "dashboard": {
-    "title": "Your dashboard",
-    "welcome": "Welcome, {{name}}",
-    "intro": "This is a temporary home page for the authentication module. Scheme recommendations will appear here in the full JanSahayak application.",
-    "profileHeading": "Your profile",
+    "title": "Citizen Dashboard",
+    "servicesHeading": "Citizen Services",
+    "profileHeading": "Your Account Details",
+    "fullName": "Full name",
     "email": "Email",
     "mobile": "Mobile",
     "mobileEmpty": "Not provided",
+    "memberSince": "Member since",
     "logout": "Log out",
-    "loggingOut": "Logging out…"
+    "loggingOut": "Logging out…",
+    "sidebar": {
+      "ariaLabel": "Dashboard navigation",
+      "portalLabel": "Citizen Portal",
+      "collapse": "Collapse sidebar",
+      "expand": "Expand sidebar",
+      "closeMenu": "Close navigation menu"
+    },
+    "navbar": {
+      "openMenu": "Open navigation menu",
+      "searchLabel": "Search dashboard services",
+      "searchPlaceholder": "Search services or schemes…",
+      "searchSchemesFor": "Search schemes for \"{{query}}\"",
+      "notifications": "Notifications",
+      "noNotifications": "You have no new notifications right now."
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "schemes": "Scheme Explorer",
+      "eligibility": "Eligibility Checker",
+      "help": "AI Help Center",
+      "feedback": "Feedback",
+      "profile": "My Profile"
+    },
+    "welcome": {
+      "badge": "Citizen Hub",
+      "title": "Welcome back, {{name}}!",
+      "subtitle": "Discover government schemes, check your eligibility and access the assistance available to you.",
+      "accountStatusLabel": "Account profile details",
+      "fieldsCompleted": "{{completed}} of {{total}} fields",
+      "profileReady": "Your basic contact details are up to date.",
+      "profileIncomplete": "Add your mobile number or review your details in My Profile."
+    },
+    "quickAccess": {
+      "title": "Quick Access"
+    },
+    "cards": {
+      "schemes": {
+        "title": "Scheme Explorer",
+        "description": "Explore government welfare schemes and discover benefits relevant to your circumstances.",
+        "action": "Explore Schemes"
+      },
+      "eligibility": {
+        "title": "Check Your Eligibility",
+        "description": "Find out which government schemes you may qualify for based on your profile.",
+        "action": "Check Eligibility"
+      },
+      "help": {
+        "title": "AI Help Center",
+        "description": "Get assistance with understanding government schemes, eligibility conditions and application procedures.",
+        "action": "Get Assistance"
+      },
+      "feedback": {
+        "title": "Share Your Feedback",
+        "description": "Share suggestions, report difficulties and help us improve JanSahayak.",
+        "action": "Share Feedback"
+      },
+      "profile": {
+        "title": "My Profile",
+        "description": "View and update your personal information, occupations and registration details.",
+        "action": "View Profile"
+      }
+    }
+  },
+  "placeholder": {
+    "underDevelopment": "Under Development",
+    "backToDashboard": "Back to Dashboard",
+    "searchContext": "Search query: \"{{query}}\"",
+    "modules": {
+      "schemes": {
+        "description": "The Scheme Explorer module is currently under development. Soon you will be able to browse, filter and search government welfare schemes here."
+      },
+      "eligibility": {
+        "description": "The Eligibility Checker module is currently under development. Soon you will be able to check which government schemes match your profile."
+      },
+      "help": {
+        "description": "The AI Help Center module is currently under development. Soon you will be able to ask questions about scheme rules, required documents and application steps."
+      },
+      "feedback": {
+        "description": "The Feedback module is currently under development. Soon you will be able to submit suggestions and report issues directly here."
+      },
+      "profile": {
+        "description": "Full profile and registration editing is currently under development. Your current account details are shown below."
+      }
+    }
   },
   "validation": {
     "emailRequired": "Please enter your email address.",
