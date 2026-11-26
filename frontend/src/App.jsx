@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -6,12 +6,10 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import Dashboard from './pages/Dashboard';
-import RegistrationWizard from './features/registration/RegistrationWizard';
 import { useAuth } from './context/AuthContext';
 
-export default function App() {
+function PublicLayout() {
   const { t } = useTranslation();
-  const { isAuthenticated, loading } = useAuth();
 
   return (
     <div className="app-shell">
@@ -34,14 +32,6 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <ProtectedRoute>
-                <RegistrationWizard />
               </ProtectedRoute>
             }
           />

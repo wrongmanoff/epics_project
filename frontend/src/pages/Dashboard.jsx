@@ -1,25 +1,16 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
+import { FEATURE_CARDS } from '../features/dashboard/config/navigation';
+import WelcomeSection from '../features/dashboard/components/WelcomeSection';
+import QuickAccess from '../features/dashboard/components/QuickAccess';
+import FeatureCard from '../features/dashboard/components/FeatureCard';
+import AccountOverview from '../features/dashboard/components/AccountOverview';
 
 export default function Dashboard() {
   const { t } = useTranslation();
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const [loggingOut, setLoggingOut] = useState(false);
-
-  const handleLogout = async () => {
-    setLoggingOut(true);
-    try {
-      await logout();
-      navigate('/login', { replace: true });
-    } finally {
-      setLoggingOut(false);
-    }
-  };
-
-  const displayName = user?.full_name || user?.email || '';
+  const { user } = useAuth();
 
   return (
     <div className="dashboard">
@@ -43,9 +34,6 @@ export default function Dashboard() {
         </ul>
 
         <div className="dashboard__actions">
-          <Link to="/register" className="btn btn--primary">
-            {t('dashboard.completeProfile')}
-          </Link>
           <button
             type="button"
             className="btn btn--secondary"
@@ -55,7 +43,15 @@ export default function Dashboard() {
             {loggingOut ? t('dashboard.loggingOut') : t('dashboard.logout')}
           </button>
         </div>
-      </div>
+
+        <div className="dash-cards-grid">
+          {FEATURE_CARDS.map((item) => (
+            <FeatureCard key={item.id} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <AccountOverview user={user} />
     </div>
   );
 }
